@@ -1,0 +1,61 @@
+<!-- <div class="big-container-fav">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-lg-4">
+      <div class="row">
+        <div class="text-fav-right">
+          <h5>My favourites resorts</h5>
+        </div>
+      </div>
+      <div class="row fav-resorts-description">
+        <% if current_user.favorite_resorts %>
+          <% current_user.favorite_resorts.each do |resort| %>
+          <img src=<%= resort.image %>>
+          <%= resort.name %>
+          <%= resort.country %>
+          <%= resort.continent %>
+          <% end %>
+        <% end %>
+
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-8 col-lg-8">
+      <div class="fav-map">
+        <div id="map" data-markers="<%= @markers.to_json %>"></div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+<div class="big-container-fav">
+  <div class="fav-container">
+    <div class=" column-content">
+      <div class="fav-head-content">
+        <div class="fav-title">
+          <h2>Your favorites:</h2>
+        </div>
+        <div class="fav-count">
+          <br>
+          <h5>You have <%= current_user.favorite_resorts.count %> favorite resorts</h5>
+        </div>
+      </div>
+      <div class="fav-cards">
+        <% if current_user.favorite_resorts %>
+          <% current_user.favorite_resorts.each do |resort| %>
+          <%= link_to resort_path(resort), target: :_blank do %>
+          <img class="image-dynamic" src=<%= resort.image %>>
+          <% end  %>
+          <div class="fav-card-content"></div>
+            <p class="country-continent-fav"> <%= resort.country %>, <%= resort.continent %></p>
+            <p class="fav-card-name"> <%= resort.name %></p>
+            <p class="fav-card-price"> €<%= resort.price %>per/night</p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class=" column-map">
+      <div class="fav-map" id="map" data-markers="<%= @markers.to_json %>"></div>
+    </div>
+
+
