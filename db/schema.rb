@@ -10,21 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_045253) do
+ActiveRecord::Schema.define(version: 2018_08_20_054532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bookings", force: :cascade do |t|
-    t.string "start_date"
-    t.integer "duration"
-    t.integer "price"
-    t.bigint "user_id"
-    t.bigint "resort_id"
+  create_table "airports", force: :cascade do |t|
+    t.string "name"
+    t.string "airport_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["resort_id"], name: "index_bookings_on_resort_id"
-    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -52,20 +47,31 @@ ActiveRecord::Schema.define(version: 2018_08_03_045253) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "resorts", force: :cascade do |t|
-    t.string "name"
-    t.string "continent"
-    t.string "country"
-    t.string "address"
+  create_table "photos", force: :cascade do |t|
     t.string "image"
-    t.integer "price"
-    t.string "description"
-    t.bigint "user_id"
+    t.bigint "resort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "website"
+    t.index ["resort_id"], name: "index_photos_on_resort_id"
+  end
+
+  create_table "resorts", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "continent"
+    t.string "country"
+    t.string "description"
+    t.string "address"
+    t.string "website_link"
+    t.string "contact_link"
+    t.string "booking_link"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "user_id"
+    t.bigint "airport_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["airport_id"], name: "index_resorts_on_airport_id"
     t.index ["user_id"], name: "index_resorts_on_user_id"
   end
 
@@ -75,21 +81,15 @@ ActiveRecord::Schema.define(version: 2018_08_03_045253) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet "current_sign_in_ip"
-    t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "is_owner"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "resorts"
-  add_foreign_key "bookings", "users"
   add_foreign_key "feature_resorts", "features"
   add_foreign_key "feature_resorts", "resorts"
+  add_foreign_key "photos", "resorts"
+  add_foreign_key "resorts", "airports"
   add_foreign_key "resorts", "users"
 end

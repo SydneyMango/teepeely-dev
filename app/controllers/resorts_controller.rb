@@ -53,7 +53,7 @@ class ResortsController < ApplicationController
   end
 
   def resort_params
-    params.require(:resort).permit(:name, :continent, :country, :address, :price, :description )
+    params.require(:resort).permit(:name, :continent, :country, :address, :description )
   end
 end
 

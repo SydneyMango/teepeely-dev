@@ -8917,3 +8917,1972 @@ Processing by ResortsController#index as HTML
 Completed 200 OK in 113ms (Views: 56.3ms | ActiveRecord: 6.2ms)
 
 
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (122.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (111.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (252.3ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (269.0ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "photo" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavourites (20180820054521)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "favourites" ("id" bigserial primary key, "user_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_3073f88368"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_6eabd10abd"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054521_create_favourites.rb:3
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE  INDEX  "index_favourites_on_user_id" ON "favourites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favourites.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_favourites_on_resort_id" ON "favourites"  ("resort_id")[0m
+  ↳ db/migrate/20180820054521_create_favourites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:08:05.079183"], ["updated_at", "2018-08-22 04:08:05.079183"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (113.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (110.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (249.9ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (247.6ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "image" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "image" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavourites (20180820054521)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20180820054521)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favorited_type" character varying, "favorited_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favorited_type_and_favorited_id" ON "favorites"  ("favorited_type", "favorited_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:21:45.056030"], ["updated_at", "2018-08-22 04:21:45.056030"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-08-22 11:28:16 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/adrian/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (9.4ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 1935ms (Views: 1928.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resorts?utf8=%E2%9C%93&location=&feature=" for 127.0.0.1 at 2018-08-22 11:28:22 +0700
+Processing by ResortsController#index as HTML
+  Parameters: {"utf8"=>"✓", "location"=>"", "feature"=>""}
+  [1m[36mResort Load (2.5ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts" WHERE "resorts"."latitude" IS NOT NULL AND "resorts"."longitude" IS NOT NULL[0m
+  ↳ app/controllers/resorts_controller.rb:19
+  Rendering resorts/index.html.erb within layouts/application
+  Rendered resorts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 48.0ms | ActiveRecord: 7.3ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (114.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (114.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (251.8ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (243.8ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "image" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website_link" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "image" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20180820054521)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favorited_type" character varying, "favorited_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favorited_type_and_favorited_id" ON "favorites"  ("favorited_type", "favorited_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:35:46.874714"], ["updated_at", "2018-08-22 04:35:46.874714"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.9ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (1.4ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$Sms2I0IaO51Vlr.juAT5.e2uGb2TgnW1d59SxgDmi135BR.iBqPw6"], ["created_at", "2018-08-22 04:40:27.722330"], ["updated_at", "2018-08-22 04:40:27.722330"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Create (0.8ms)[0m  [1m[32mINSERT INTO "airports" ("name", "airport_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Melbourne Airport"], ["airport_code", "MEL"], ["created_at", "2018-08-22 04:40:27.747160"], ["updated_at", "2018-08-22 04:40:27.747160"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Surfing"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Create (0.9ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Surfing"], ["created_at", "2018-08-22 04:40:27.761161"], ["updated_at", "2018-08-22 04:40:27.761161"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Yoga"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-08-22 04:40:27.769405"], ["updated_at", "2018-08-22 04:40:27.769405"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Eco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eco"], ["created_at", "2018-08-22 04:40:27.777589"], ["updated_at", "2018-08-22 04:40:27.777589"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Vegan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Create (1.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vegan"], ["created_at", "2018-08-22 04:40:27.784477"], ["updated_at", "2018-08-22 04:40:27.784477"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Diving"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Diving"], ["created_at", "2018-08-22 04:40:27.793802"], ["updated_at", "2018-08-22 04:40:27.793802"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Golf"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Golf"], ["created_at", "2018-08-22 04:40:27.800242"], ["updated_at", "2018-08-22 04:40:27.800242"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Day Spa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Day Spa"], ["created_at", "2018-08-22 04:40:27.807102"], ["updated_at", "2018-08-22 04:40:27.807102"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.8ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (1.1ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.9ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.8ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.6ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.3ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.6ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (0.8ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$NxSls3KLi98MTSksColZbOnlwGy/nF/GLO1A5T5eEdvkemjw3Qm8S"], ["created_at", "2018-08-22 04:44:32.260277"], ["updated_at", "2018-08-22 04:44:32.260277"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (114.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (111.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (246.1ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (245.9ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "image" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website_link" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "image" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20180820054521)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favorited_type" character varying, "favorited_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favorited_type_and_favorited_id" ON "favorites"  ("favorited_type", "favorited_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:45:13.658890"], ["updated_at", "2018-08-22 04:45:13.658890"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.8ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (0.8ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$VS0PyHChnXZ43EqL4HZrru.NNFCtG2eildbHV0HezxFIEcnFgBCxG"], ["created_at", "2018-08-22 04:45:21.954642"], ["updated_at", "2018-08-22 04:45:21.954642"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Create (0.8ms)[0m  [1m[32mINSERT INTO "airports" ("name", "airport_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Melbourne Airport"], ["airport_code", "MEL"], ["created_at", "2018-08-22 04:45:21.982061"], ["updated_at", "2018-08-22 04:45:21.982061"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Surfing"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Create (0.9ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Surfing"], ["created_at", "2018-08-22 04:45:21.999074"], ["updated_at", "2018-08-22 04:45:21.999074"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Yoga"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Create (0.8ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-08-22 04:45:22.006797"], ["updated_at", "2018-08-22 04:45:22.006797"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Eco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eco"], ["created_at", "2018-08-22 04:45:22.015560"], ["updated_at", "2018-08-22 04:45:22.015560"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Vegan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vegan"], ["created_at", "2018-08-22 04:45:22.025098"], ["updated_at", "2018-08-22 04:45:22.025098"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Diving"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Diving"], ["created_at", "2018-08-22 04:45:22.031612"], ["updated_at", "2018-08-22 04:45:22.031612"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Golf"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Golf"], ["created_at", "2018-08-22 04:45:22.039329"], ["updated_at", "2018-08-22 04:45:22.039329"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Day Spa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Day Spa"], ["created_at", "2018-08-22 04:45:22.046186"], ["updated_at", "2018-08-22 04:45:22.046186"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.8ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.8ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (1.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.3ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.6ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (1.0ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$x.meZa9sc6paqa53qUBprO4mte4BzbqIhxKQqg2fs.XilDD/u3VXW"], ["created_at", "2018-08-22 04:47:34.195583"], ["updated_at", "2018-08-22 04:47:34.195583"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (113.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (111.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (244.6ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (247.1ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "image" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website_link" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "image" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20180820054521)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favorited_type" character varying, "favorited_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favorited_type_and_favorited_id" ON "favorites"  ("favorited_type", "favorited_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:48:29.506343"], ["updated_at", "2018-08-22 04:48:29.506343"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.9ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (0.7ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$qmXFmM/iU9MvQ.6FRRppjeDYD9JxnRq7lo9ot3VgZPJ5N89aQDiJ2"], ["created_at", "2018-08-22 04:48:36.566910"], ["updated_at", "2018-08-22 04:48:36.566910"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Create (0.8ms)[0m  [1m[32mINSERT INTO "airports" ("name", "airport_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Melbourne Airport"], ["airport_code", "MEL"], ["created_at", "2018-08-22 04:48:36.592707"], ["updated_at", "2018-08-22 04:48:36.592707"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Surfing"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Create (1.0ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Surfing"], ["created_at", "2018-08-22 04:48:36.607221"], ["updated_at", "2018-08-22 04:48:36.607221"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Yoga"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-08-22 04:48:36.618664"], ["updated_at", "2018-08-22 04:48:36.618664"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Eco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Create (0.9ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eco"], ["created_at", "2018-08-22 04:48:36.629594"], ["updated_at", "2018-08-22 04:48:36.629594"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Vegan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vegan"], ["created_at", "2018-08-22 04:48:36.636806"], ["updated_at", "2018-08-22 04:48:36.636806"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Diving"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Diving"], ["created_at", "2018-08-22 04:48:36.643179"], ["updated_at", "2018-08-22 04:48:36.643179"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Golf"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Golf"], ["created_at", "2018-08-22 04:48:36.649069"], ["updated_at", "2018-08-22 04:48:36.649069"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Day Spa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Day Spa"], ["created_at", "2018-08-22 04:48:36.655481"], ["updated_at", "2018-08-22 04:48:36.655481"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.7ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.8ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (1.0ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.6ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.6ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.3ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.6ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (0.8ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$M6oi8JEAVrCqC6y9EAdxbOlZkUeBKiMD/0CtOy5z9wpWfG.Dld95m"], ["created_at", "2018-08-22 04:49:46.052521"], ["updated_at", "2018-08-22 04:49:46.052521"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (113.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (110.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (245.4ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (253.7ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "image" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website_link" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "image" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20180820054521)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favorited_type" character varying, "favorited_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favorited_type_and_favorited_id" ON "favorites"  ("favorited_type", "favorited_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:50:12.071026"], ["updated_at", "2018-08-22 04:50:12.071026"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.8ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (0.7ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$GFyiNS9YFrjsdk0H9pzYzeMTC8zUY5SXNrM92r42ttYvTtooYEXNC"], ["created_at", "2018-08-22 04:50:21.852293"], ["updated_at", "2018-08-22 04:50:21.852293"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Create (0.8ms)[0m  [1m[32mINSERT INTO "airports" ("name", "airport_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Melbourne Airport"], ["airport_code", "MEL"], ["created_at", "2018-08-22 04:50:21.877611"], ["updated_at", "2018-08-22 04:50:21.877611"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Surfing"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Create (1.9ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Surfing"], ["created_at", "2018-08-22 04:50:21.892345"], ["updated_at", "2018-08-22 04:50:21.892345"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Yoga"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-08-22 04:50:21.901461"], ["updated_at", "2018-08-22 04:50:21.901461"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Eco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Create (1.0ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eco"], ["created_at", "2018-08-22 04:50:21.910050"], ["updated_at", "2018-08-22 04:50:21.910050"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Vegan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vegan"], ["created_at", "2018-08-22 04:50:21.917720"], ["updated_at", "2018-08-22 04:50:21.917720"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Diving"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Create (0.8ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Diving"], ["created_at", "2018-08-22 04:50:21.925235"], ["updated_at", "2018-08-22 04:50:21.925235"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Golf"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Golf"], ["created_at", "2018-08-22 04:50:21.932816"], ["updated_at", "2018-08-22 04:50:21.932816"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Day Spa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Day Spa"], ["created_at", "2018-08-22 04:50:21.939779"], ["updated_at", "2018-08-22 04:50:21.939779"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (1.0ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.7ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.8ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.5ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.7ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.6ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.4ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFeatureResort Load (0.3ms)[0m  [1m[34mSELECT "feature_resorts".* FROM "feature_resorts" WHERE "feature_resorts"."feature_id" = $1[0m  [["feature_id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[36mFeature Destroy (0.7ms)[0m  [1m[31mDELETE FROM "features" WHERE "features"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (0.9ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$4EBRLlc4sqp0DVEHG3K4Eu9EMSJLh1vXHQ9cYISNdVk1BwESQQGTe"], ["created_at", "2018-08-22 04:52:53.521181"], ["updated_at", "2018-08-22 04:52:53.521181"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (114.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (112.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "luxury-resorts_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (248.7ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (246.6ms)[0m  [1m[35mCREATE DATABASE "luxury-resorts_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (35.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180818051701)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:5
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:39
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180818051701_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180818051701"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAirports (20180820051502)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "airports" ("id" bigserial primary key, "name" character varying, "airport_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051502_create_airports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051502"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatures (20180820051814)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "features" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820051814_create_features.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820051814"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateResorts (20180820054457)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "resorts" ("id" bigserial primary key, "name" character varying, "image" character varying, "continent" character varying, "country" character varying, "description" character varying, "address" character varying, "website_link" character varying, "contact_link" character varying, "booking_link" character varying, "latitude" float, "longitude" float, "user_id" bigint, "airport_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_455a5da4f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2186220b93"
+FOREIGN KEY ("airport_id")
+  REFERENCES "airports" ("id")
+)[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_user_id" ON "resorts"  ("user_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE  INDEX  "index_resorts_on_airport_id" ON "resorts"  ("airport_id")[0m
+  ↳ db/migrate/20180820054457_create_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054457"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePhotos (20180820054509)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "image" character varying, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_abbf718543"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_resort_id" ON "photos"  ("resort_id")[0m
+  ↳ db/migrate/20180820054509_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054509"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20180820054521)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favorited_type" character varying, "favorited_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favorited_type_and_favorited_id" ON "favorites"  ("favorited_type", "favorited_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  ↳ db/migrate/20180820054521_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054521"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFeatureResorts (20180820054532)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "feature_resorts" ("id" bigserial primary key, "feature_id" bigint, "resort_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26787842e"
+FOREIGN KEY ("feature_id")
+  REFERENCES "features" ("id")
+, CONSTRAINT "fk_rails_7cb940474f"
+FOREIGN KEY ("resort_id")
+  REFERENCES "resorts" ("id")
+)[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_feature_id" ON "feature_resorts"  ("feature_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_feature_resorts_on_resort_id" ON "feature_resorts"  ("resort_id")[0m
+  ↳ db/migrate/20180820054532_create_feature_resorts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180820054532"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-22 04:53:26.564894"], ["updated_at", "2018-08-22 04:53:26.564894"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237258859069209825)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mFeature Load (0.9ms)[0m  [1m[34mSELECT "features".* FROM "features"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mResort Load (1.2ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "email@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email@email.com"], ["encrypted_password", "$2a$11$7V7lCQNwYD6YbtkLDLs9YepxopeJUxQmFqxiy6n8AJtZOaMGIYqrG"], ["created_at", "2018-08-22 04:53:33.457345"], ["updated_at", "2018-08-22 04:53:33.457345"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."name" = $1 LIMIT $2[0m  [["name", "Melbourne Airport"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "airports" WHERE "airports"."airport_code" = $1 LIMIT $2[0m  [["airport_code", "MEL"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mAirport Create (0.7ms)[0m  [1m[32mINSERT INTO "airports" ("name", "airport_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Melbourne Airport"], ["airport_code", "MEL"], ["created_at", "2018-08-22 04:53:33.483933"], ["updated_at", "2018-08-22 04:53:33.483933"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Surfing"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFeature Create (0.9ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Surfing"], ["created_at", "2018-08-22 04:53:33.496433"], ["updated_at", "2018-08-22 04:53:33.496433"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Yoga"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-08-22 04:53:33.504898"], ["updated_at", "2018-08-22 04:53:33.504898"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Eco"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mFeature Create (0.9ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eco"], ["created_at", "2018-08-22 04:53:33.519048"], ["updated_at", "2018-08-22 04:53:33.519048"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Vegan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vegan"], ["created_at", "2018-08-22 04:53:33.526885"], ["updated_at", "2018-08-22 04:53:33.526885"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Diving"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mFeature Create (0.5ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Diving"], ["created_at", "2018-08-22 04:53:33.535701"], ["updated_at", "2018-08-22 04:53:33.535701"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Golf"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Golf"], ["created_at", "2018-08-22 04:53:33.542332"], ["updated_at", "2018-08-22 04:53:33.542332"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "features" WHERE "features"."name" = $1 LIMIT $2[0m  [["name", "Day Spa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mFeature Create (0.6ms)[0m  [1m[32mINSERT INTO "features" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Day Spa"], ["created_at", "2018-08-22 04:53:33.548809"], ["updated_at", "2018-08-22 04:53:33.548809"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mResort Create (1.8ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Shanghai Fenyang Boutique Hotel"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "China"], ["description", "China resort description"], ["address", "No.45 Fenyang Road, Xuhui, 210008 Shanghai, China"], ["website_link", "http://www.china.com/"], ["latitude", 31.212558], ["longitude", 121.45499], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:53:45.358550"], ["updated_at", "2018-08-22 04:53:45.358550"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mResort Create (1.2ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "AYANA Resort and Spa, BALI"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Indonesia"], ["description", "Indonesia resort description"], ["address", "Karang Mas Estate, Jalan Karang Mas Sejahtera, 80364 Jimbaran, Indonesia"], ["website_link", "http://www.indonesia.com/"], ["latitude", -8.788848999999999], ["longitude", 115.155452], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:53:47.852459"], ["updated_at", "2018-08-22 04:53:47.852459"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mResort Create (1.3ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Katathani Phuket Beach Resort"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Thailand"], ["description", "France resort description"], ["address", "14 Kata Noi Rd., 83100 Kata Beach, Thailand "], ["website_link", "http://www.france.com/"], ["latitude", 7.807111000000001], ["longitude", 98.299593], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:53:50.348964"], ["updated_at", "2018-08-22 04:53:50.348964"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mResort Create (1.1ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Sokha Angkor Resort"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Cambodia"], ["description", "Bolivia resort description"], ["address", "National Road No. 6 and Sivatha Street Junction, Siem Reap, Cambodia"], ["website_link", "http://www.bolivia.com/"], ["latitude", 13.3637417], ["longitude", 103.855918], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:53:51.174031"], ["updated_at", "2018-08-22 04:53:51.174031"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mResort Create (1.2ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Constance Moofushi"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Maldives"], ["description", "Upscale all-inclusive resort in the Indian Ocean"], ["address", "South Atoll, Alifu Atoll 00200, Moofushi Island, Maldives"], ["website_link", "https://www.constancehotels.com/en/hotels-resorts/maldives/moofushi/"], ["latitude", 3.884293], ["longitude", 72.72776999999999], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:53:51.882611"], ["updated_at", "2018-08-22 04:53:51.882611"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mResort Create (1.1ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Sunway Hotel & Spa"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Malaysia"], ["description", "Upscale, beachfront, adults-only resort"], ["address", "Persiaran Lagoon, Bandar Sunway, 47500 Kuala Lumpur, Malaysia"], ["website_link", "https://www.barcelo.com/en-us/royal-hideaway/hotels/mexico/riviera-maya/royal-hideaway-playacar/?utm_source=google&utm_medium=organic&utm_campaign=my_business&utm_content=h385"], ["latitude", 3.072268], ["longitude", 101.608965], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:05.177468"], ["updated_at", "2018-08-22 04:54:05.177468"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mResort Create (0.9ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "The Village Coconut Island"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Thailand"], ["description", "Upscale beachfront resort overlooking Phang Nga Bay"], ["address", "51/7 Moo 6, T.KOHKAEW, Phuket 83200, Thailand"], ["website_link", "http://www.thevillage-coconutisland.com/"], ["latitude", 7.938938], ["longitude", 98.425896], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:12.044121"], ["updated_at", "2018-08-22 04:54:12.044121"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mResort Create (0.9ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Grand Coloane Resort"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "China"], ["description", "Luxury beach villa with private pool"], ["address", "1918 Estrada de Hac Sa, Coloane, Macau, Macao"], ["website_link", "http://www.eastbedarra.com.au/"], ["latitude", 22.1253114], ["longitude", 113.5767552], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:13.979816"], ["updated_at", "2018-08-22 04:54:13.979816"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mResort Create (0.9ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Jimbaran Cliffs Hotel & Spa"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Indonesia"], ["description", "Exclusive Carribean vacation spot"], ["address", "Jalan Gedong Sari II #888, Jimbaran, 80361 Jimbaran, Indonesia"], ["website_link", "http://www.cottonhouse.net/"], ["latitude", -8.790538], ["longitude", 115.200251], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:16.994137"], ["updated_at", "2018-08-22 04:54:16.994137"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mResort Create (0.8ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Pertiwi Bisma "], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Asia"], ["country", "Indonesia"], ["description", "Curacao resort description"], ["address", "Jl. Bisma - Ubud, 80571 Ubud, Indonesia"], ["website_link", "http://www.china.com/"], ["latitude", -8.511524], ["longitude", 115.258271], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:25.636450"], ["updated_at", "2018-08-22 04:54:25.636450"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mResort Create (0.8ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Jade Mountain"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Carribean"], ["country", "St Lucia"], ["description", "Indonesia resort description"], ["address", "Jade Mountain Resort, St Lucia"], ["website_link", "http://www.indonesia.com/"], ["latitude", 13.864564], ["longitude", -61.075653], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:35.648528"], ["updated_at", "2018-08-22 04:54:35.648528"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mResort Create (1.1ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Turquesa Hotel"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Carribean"], ["country", "Domincan Republic"], ["description", "Bolivia resort description"], ["address", "1Av. Anacaona 101, Santo Domingo, Dominican Republic"], ["website_link", "http://www.bolivia.com/"], ["latitude", 18.438664], ["longitude", -69.969524], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:54:50.660584"], ["updated_at", "2018-08-22 04:54:50.660584"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mResort Create (1.2ms)[0m  [1m[32mINSERT INTO "resorts" ("name", "image", "continent", "country", "description", "address", "website_link", "latitude", "longitude", "user_id", "airport_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Hyatt Regency Nice Palais de la Méditerranée"], ["image", "https://t-ec.bstatic.com/images/hotel/max1024x768/291/29136264.jpg"], ["continent", "Europe"], ["country", "France"], ["description", "Bolivia resort description"], ["address", "13 Prom. des Anglais, 06000 Nice, France"], ["website_link", "http://www.bolivia.com/"], ["latitude", 43.6953], ["longitude", -7.263006], ["user_id", 1], ["airport_id", 1], ["created_at", "2018-08-22 04:55:00.673077"], ["updated_at", "2018-08-22 04:55:00.673077"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mFeatureResort Create (1.4ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 1], ["created_at", "2018-08-22 04:55:00.752660"], ["updated_at", "2018-08-22 04:55:00.752660"]]
+  ↳ db/seeds.rb:58
+  [1m[36mFeatureResort Create (0.8ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 3], ["resort_id", 1], ["created_at", "2018-08-22 04:55:00.757080"], ["updated_at", "2018-08-22 04:55:00.757080"]]
+  ↳ db/seeds.rb:58
+  [1m[36mFeatureResort Create (0.8ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 7], ["resort_id", 1], ["created_at", "2018-08-22 04:55:00.760617"], ["updated_at", "2018-08-22 04:55:00.760617"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mFeatureResort Create (0.8ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 2], ["created_at", "2018-08-22 04:55:00.767599"], ["updated_at", "2018-08-22 04:55:00.767599"]]
+  ↳ db/seeds.rb:59
+  [1m[36mFeatureResort Create (0.7ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 6], ["resort_id", 2], ["created_at", "2018-08-22 04:55:00.771193"], ["updated_at", "2018-08-22 04:55:00.771193"]]
+  ↳ db/seeds.rb:59
+  [1m[36mFeatureResort Create (0.7ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 7], ["resort_id", 2], ["created_at", "2018-08-22 04:55:00.776105"], ["updated_at", "2018-08-22 04:55:00.776105"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 3], ["created_at", "2018-08-22 04:55:00.782358"], ["updated_at", "2018-08-22 04:55:00.782358"]]
+  ↳ db/seeds.rb:60
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 3], ["resort_id", 3], ["created_at", "2018-08-22 04:55:00.785201"], ["updated_at", "2018-08-22 04:55:00.785201"]]
+  ↳ db/seeds.rb:60
+  [1m[36mFeatureResort Create (0.5ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 7], ["resort_id", 3], ["created_at", "2018-08-22 04:55:00.788168"], ["updated_at", "2018-08-22 04:55:00.788168"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 4], ["created_at", "2018-08-22 04:55:00.794047"], ["updated_at", "2018-08-22 04:55:00.794047"]]
+  ↳ db/seeds.rb:61
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 5], ["resort_id", 4], ["created_at", "2018-08-22 04:55:00.797473"], ["updated_at", "2018-08-22 04:55:00.797473"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 5], ["created_at", "2018-08-22 04:55:00.804299"], ["updated_at", "2018-08-22 04:55:00.804299"]]
+  ↳ db/seeds.rb:62
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 4], ["resort_id", 5], ["created_at", "2018-08-22 04:55:00.807652"], ["updated_at", "2018-08-22 04:55:00.807652"]]
+  ↳ db/seeds.rb:62
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 7], ["resort_id", 5], ["created_at", "2018-08-22 04:55:00.811017"], ["updated_at", "2018-08-22 04:55:00.811017"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 6], ["created_at", "2018-08-22 04:55:00.817387"], ["updated_at", "2018-08-22 04:55:00.817387"]]
+  ↳ db/seeds.rb:63
+  [1m[36mFeatureResort Create (0.7ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 4], ["resort_id", 6], ["created_at", "2018-08-22 04:55:00.820942"], ["updated_at", "2018-08-22 04:55:00.820942"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 7], ["created_at", "2018-08-22 04:55:00.827872"], ["updated_at", "2018-08-22 04:55:00.827872"]]
+  ↳ db/seeds.rb:64
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 5], ["resort_id", 7], ["created_at", "2018-08-22 04:55:00.831215"], ["updated_at", "2018-08-22 04:55:00.831215"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 8], ["created_at", "2018-08-22 04:55:00.837713"], ["updated_at", "2018-08-22 04:55:00.837713"]]
+  ↳ db/seeds.rb:65
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 6], ["resort_id", 8], ["created_at", "2018-08-22 04:55:00.841134"], ["updated_at", "2018-08-22 04:55:00.841134"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 9], ["created_at", "2018-08-22 04:55:00.847942"], ["updated_at", "2018-08-22 04:55:00.847942"]]
+  ↳ db/seeds.rb:66
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 5], ["resort_id", 9], ["created_at", "2018-08-22 04:55:00.851365"], ["updated_at", "2018-08-22 04:55:00.851365"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mFeatureResort Create (0.7ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 10], ["created_at", "2018-08-22 04:55:00.858252"], ["updated_at", "2018-08-22 04:55:00.858252"]]
+  ↳ db/seeds.rb:67
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 10], ["created_at", "2018-08-22 04:55:00.862326"], ["updated_at", "2018-08-22 04:55:00.862326"]]
+  ↳ db/seeds.rb:67
+  [1m[36mFeatureResort Create (0.7ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 7], ["resort_id", 10], ["created_at", "2018-08-22 04:55:00.874359"], ["updated_at", "2018-08-22 04:55:00.874359"]]
+  ↳ db/seeds.rb:67
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 11], ["created_at", "2018-08-22 04:55:00.880641"], ["updated_at", "2018-08-22 04:55:00.880641"]]
+  ↳ db/seeds.rb:68
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 3], ["resort_id", 11], ["created_at", "2018-08-22 04:55:00.883972"], ["updated_at", "2018-08-22 04:55:00.883972"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mFeatureResort Create (0.9ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 2], ["resort_id", 13], ["created_at", "2018-08-22 04:55:00.891554"], ["updated_at", "2018-08-22 04:55:00.891554"]]
+  ↳ db/seeds.rb:69
+  [1m[36mFeatureResort Create (0.6ms)[0m  [1m[32mINSERT INTO "feature_resorts" ("feature_id", "resort_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["feature_id", 7], ["resort_id", 13], ["created_at", "2018-08-22 04:55:00.896475"], ["updated_at", "2018-08-22 04:55:00.896475"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+Started GET "/" for 127.0.0.1 at 2018-08-22 11:55:09 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resorts?utf8=%E2%9C%93&location=&feature=" for 127.0.0.1 at 2018-08-22 11:55:49 +0700
+Processing by ResortsController#index as HTML
+  Parameters: {"utf8"=>"✓", "location"=>"", "feature"=>""}
+  [1m[36mResort Load (1.6ms)[0m  [1m[34mSELECT "resorts".* FROM "resorts" WHERE "resorts"."latitude" IS NOT NULL AND "resorts"."longitude" IS NOT NULL[0m
+  ↳ app/controllers/resorts_controller.rb:19
+  Rendering resorts/index.html.erb within layouts/application
+  Rendered resorts/index.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 108ms (Views: 46.0ms | ActiveRecord: 10.6ms)
+
+

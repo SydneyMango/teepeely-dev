@@ -95,13 +95,4 @@
       <i class="fas fa-star"></i>
     </div>
   </div>
-  <div class="footer-form">
-    <%= form_for([@resort, @booking], layout: :inline) do |f| %>
-      Start date: <%= f.date_field :start_date, as: :date, min: Date.today, label: "Start date" %>
-      Duration: <%= f.number_field :duration, min: 1, label: "Duration" %>
-      <span class="price"> <%= @resort.price %>€ </span>
-      <span class="per-nigth">/nigth</span>
-    <%= f.button submit: 'Bfewfwe' %>
-    <% end %>
-  </div>
 </footer>

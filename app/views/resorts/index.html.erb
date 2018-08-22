@@ -6,7 +6,7 @@
 <div class="main-container">
  <div class="card-container">
    <div class="row deleting-padding">
-     
+
      <% @resorts.uniq.each do |resort| %>
        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 
@@ -37,7 +37,6 @@
        <div class=" text ">
          <div input type="text" class="location"><%= "#{resort.country}, #{resort.continent} " %> </div>
          <div input type="text" class="name"> <%= link_to resort.name, resort_path(resort) %></div>
-         <div input type="text" class="price-index"><%="€#{resort.price} per/night" %></div>
        </div>
      </div>
      <% end %>
